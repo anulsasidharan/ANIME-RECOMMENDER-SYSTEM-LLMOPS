@@ -1,0 +1,4 @@
+venv/
+logs/
+p1_anime_recommender.egg-info/
+.env
