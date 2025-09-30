@@ -27,6 +27,8 @@ RUN uv venv
 
 ## Run setup.py
 RUN uv pip install --editable .
+RUN pip install --no-cache-dir streamlit
+
 
 # Used PORTS
 EXPOSE 8501
