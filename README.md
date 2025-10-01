@@ -19,41 +19,8 @@ It is designed with **MLOps best practices** in mind: modular pipelines, contain
 
 ### High-Level Flow
 
-```mermaid
-flowchart TD
-    A[User / Client] --> B[Inference API]
-    B --> C[Pipeline Orchestrator]
-    C --> D[Embedding Model]
-    D --> E[Vector DB / Chroma]
-    E --> F[Ranking & Filtering Layer]
-    F --> G[Recommendations to User]
-```
+![alt text](image.png)
 
-### Detailed Pipeline
-
-```mermaid
-flowchart LR
-    subgraph "Data Prep"
-        A1[Anime Metadata CSV or DB] --> A2[Data Cleaning & Normalization]
-    end
-
-    subgraph "Embedding"
-        B1[LLM Embedding Model] --> B2[Anime Embeddings]
-        Q1[User Query] --> Q2[Query Embedding]
-    end
-
-    subgraph "Retrieval"
-        B2 --> C1["Vector Store (Chroma / FAISS)"]
-        Q2 --> C1
-        C1 --> C2[Top-K Similar Items]
-    end
-
-    subgraph "Postprocessing"
-        C2 --> D1[Re-ranking & Filtering]
-        D1 --> D2[Final Recommendations]
-    end
-
-    ```
 
 ## ✨ Key Features
 
@@ -84,7 +51,6 @@ flowchart LR
 
 ## 📂 Folder Structure
 
-```mermaid
 
 ├── app/                 # API / frontend app
 ├── build/               # Build artifacts
@@ -99,7 +65,7 @@ flowchart LR
 ├── main.py              # Entry point
 ├── requirements.txt     # Python dependencies
 └── setup.py / pyproject.toml
-```
+
 
 ## 📈 Scaling & Monitoring
 
