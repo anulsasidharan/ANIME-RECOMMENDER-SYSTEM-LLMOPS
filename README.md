@@ -33,22 +33,26 @@ flowchart TD
 
 ```mermaid
 flowchart LR
-    subgraph Data Prep
+    subgraph "Data Prep"
         A1[Anime Metadata CSV/DB] --> A2[Data Cleaning & Normalization]
     end
-    subgraph Embedding
+
+    subgraph "Embedding"
         B1[LLM Embedding Model] --> B2[Anime Embeddings]
         Q1[User Query] --> Q2[Query Embedding]
     end
-    subgraph Retrieval
+
+    subgraph "Retrieval"
         B2 --> C1[Vector Store (Chroma/FAISS)]
         Q2 --> C1
         C1 --> C2[Top-K Similar Items]
     end
-    subgraph Postprocessing
+
+    subgraph "Postprocessing"
         C2 --> D1[Re-ranking / Filtering]
         D1 --> D2[Final Recommendations]
-    end```
+    end
+    ```
 
 ## ✨ Key Features
 
