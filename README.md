@@ -4,24 +4,6 @@
 
 ---
 
-## 📌 Table of Contents
-
-1. [Overview](#-overview)  
-2. [Architecture & System Design](#-architecture--system-design)  
-   - [High-Level Flow](#high-level-flow)  
-   - [Detailed Pipeline](#detailed-pipeline)  
-3. [Key Features](#-key-features)  
-4. [Tools & Frameworks](#-tools--frameworks)  
-5. [Folder Structure](#-folder-structure)  
-6. [Setup & Installation](#-setup--installation)  
-7. [Usage](#-usage)  
-8. [Scaling & Monitoring](#-scaling--monitoring)  
-9. [Future Enhancements](#-future-enhancements)  
-10. [Contributing](#-contributing)  
-11. [License](#-license)  
-
----
-
 ## 🎯 Overview
 
 **ANIME-RECOMMENDER-SYSTEM-LLMOPS** is a recommendation engine that uses **LLMs for text embeddings** and a **vector database** to deliver highly relevant anime suggestions.  
@@ -54,23 +36,19 @@ flowchart LR
     subgraph Data Prep
         A1[Anime Metadata CSV/DB] --> A2[Data Cleaning & Normalization]
     end
-    
     subgraph Embedding
         B1[LLM Embedding Model] --> B2[Anime Embeddings]
         Q1[User Query] --> Q2[Query Embedding]
     end
-
     subgraph Retrieval
         B2 --> C1[Vector Store (Chroma/FAISS)]
         Q2 --> C1
         C1 --> C2[Top-K Similar Items]
     end
-
     subgraph Postprocessing
         C2 --> D1[Re-ranking / Filtering]
         D1 --> D2[Final Recommendations]
-    end
-```
+    end```
 
 ## ✨ Key Features
 
