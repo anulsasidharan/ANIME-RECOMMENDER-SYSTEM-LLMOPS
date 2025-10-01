@@ -52,19 +52,7 @@ It is designed with **MLOps best practices** in mind: modular pipelines, contain
 ## 📂 Folder Structure
 
 
-├── app/                 # API / frontend app
-├── build/               # Build artifacts
-├── chroma_db/           # Vector DB persistence
-├── config/              # Config files (API keys, model name, etc.)
-├── data/                # Input datasets (anime metadata)
-├── pipeline/            # Orchestration & pipeline scripts
-├── src/                 # Core modules (recommender, embeddings, vector store)
-├── utils/               # Logging, exception handling
-├── Dockerfile           # Container definition
-├── llmops-k8s.yaml      # Kubernetes manifest
-├── main.py              # Entry point
-├── requirements.txt     # Python dependencies
-└── setup.py / pyproject.toml
+![alt text](image-1.png)
 
 
 ## 📈 Scaling & Monitoring
