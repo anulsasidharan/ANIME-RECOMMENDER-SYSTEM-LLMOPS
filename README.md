@@ -34,7 +34,7 @@ flowchart TD
 ```mermaid
 flowchart LR
     subgraph "Data Prep"
-        A1[Anime Metadata CSV/DB] --> A2[Data Cleaning & Normalization]
+        A1[Anime Metadata CSV or DB] --> A2[Data Cleaning & Normalization]
     end
 
     subgraph "Embedding"
@@ -43,15 +43,16 @@ flowchart LR
     end
 
     subgraph "Retrieval"
-        B2 --> C1[Vector Store (Chroma/FAISS)]
+        B2 --> C1["Vector Store (Chroma / FAISS)"]
         Q2 --> C1
         C1 --> C2[Top-K Similar Items]
     end
 
     subgraph "Postprocessing"
-        C2 --> D1[Re-ranking / Filtering]
+        C2 --> D1[Re-ranking & Filtering]
         D1 --> D2[Final Recommendations]
     end
+
     ```
 
 ## ✨ Key Features
