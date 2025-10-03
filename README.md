@@ -17,8 +17,8 @@ It is designed with **MLOps best practices** in mind: modular pipelines, contain
 
 ## 🏗 Architecture & System Design
 
+![alt text](HighLevelDesign-1.jpg)
 
-![alt text](HighLevelDesign-1.png)
 
 ### High-Level Flow
 
